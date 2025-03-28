@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>My Portfolio</title>
+    <style>
+        h1{
+            color: #0910e7;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('bg.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transform: scale(0.9);
+            transition: all 0.5s ease-in-out;
+        }
+        .container:hover {
+            transform: scale(1);
+        }
+        .content {
+            color: white;
+            text-align: left;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .content h1 {
+            font-size: 2.5em;
+        }
+        .content p {
+            font-size: 1.2em;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+        .profile img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
+            transition: transform 0.5s ease-in-out;
+        }
+        .profile img:hover {
+            transform: rotateY(360deg) scale(1.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Hi, I'm Palugula Rishi Teja. A passionate Artifical Intelligence and Machine Learning Student.</p>
+            <nav>
+                <ul>
+                    <li><a href="about.html" target="_blank">About</a></li>
+                    
+                    <!-- <li><a href="projects.html" target="_blank">Projects</a></li> -->
+                    <li><a href="education.html" target="_blank">Education</a></li>
+                    <li><a href="contact.html" target="_blank">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="profile">
+            <img src="image.jpg" alt="My Picture" id="profile-pic">
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const container = document.querySelector(".container");
+            container.style.opacity = "0";
+            setTimeout(() => {
+                container.style.opacity = "1";
+                container.style.transition = "opacity 1s ease-in-out";
+            }, 500);
+        });
+    </script>
+</body>
+</html>

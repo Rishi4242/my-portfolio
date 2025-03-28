@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('bg1.image') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transform: translateY(30px);
+            opacity: 0;
+            transition: all 0.6s ease-in-out;
+        }
+        .container.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        .project {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .project:hover {
+            transform: scale(1.05);
+        }
+        .project a {
+            color: yellow;
+            font-size: 1.2em;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .project a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="projects-container">
+        <h1>My Projects</h1>
+        <div class="project">
+            <h2>Local Vendor Review System</h2>
+            <p>A system to review and rate local vendors built using Java Spring Boot and React.js.</p>
+            <p><a href="#">View Project</a></p>
+        </div>
+        <div class="project">
+            <h2>Employee Management System</h2>
+            <p>A CRUD-based employee management system using Spring Boot and MySQL.</p>
+            <p><a href="#">View Project</a></p>
+        </div>
+        <div class="project">
+            <h2>Car Rental System</h2>
+            <p>A web application for renting and managing cars, developed using React.js and Spring Boot.</p>
+            <p><a href="#">View Project</a></p>
+        </div>
+        <div class="project">
+            <h2>Banking Management System</h2>
+            <p>A basic banking system with features like deposit, withdrawal, and balance checking.</p>
+            <p><a href="#">View Project</a></p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const container = document.getElementById("projects-container");
+            setTimeout(() => {
+                container.classList.add("show");
+            }, 500);
+        });
+    </script>
+</body>
+</html>

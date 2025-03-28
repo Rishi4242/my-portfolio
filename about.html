@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon1.ico">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('/images/bg1.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transform: translateY(30px);
+            opacity: 0;
+            transition: all 0.6s ease-in-out;
+        }
+        .container.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        .about-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .about-section:hover {
+            transform: scale(1.05);
+        }
+        .resume {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .resume a {
+            color: yellow;
+            font-size: 1.2em;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .resume a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="about-container">
+        <h1>About Me</h1>
+        <div class="about-section">
+            <h2>Who Am I?</h2>
+            <p>Hi, I'm Palugula Rishi Teja, a passionate developer with a strong interest in web development and Data Structures and Algorithms.</p>
+        </div>
+        <div class="about-section">
+            <h2>My Skills</h2>
+            <p>Proficient in HTML, CSS, JavaScript, React.js, Java, and Spring Boot.</p>
+            <p>Strong problem-solving skills and experience in building web applications.</p>
+        </div>
+        <div class="about-section">
+            <h2>Hobbies & Interests</h2>
+            <p>Coding, Gaming, Traveling, and Learning new technologies.</p>
+        </div>
+        <div class="resume">
+            <h2>My Resume</h2>
+            <p><a href="rishi_resume.pdf" target="_blank">View My Resume</a></p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const container = document.getElementById("about-container");
+            setTimeout(() => {
+                container.classList.add("show");
+            }, 500);
+        });
+    </script>
+</body>
+</html>
